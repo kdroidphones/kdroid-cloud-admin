@@ -1,0 +1,5 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KDroid Administrator</title><link rel="stylesheet" href="app.css"></head>
+<body><main><header><div><p class="eyebrow">KDROID</p><h1>Phone Administrator</h1><p>Manage approved stores and updates for every enrolled phone.</p></div><button id="logout" class="quiet hidden">Sign out</button></header>
+<section id="auth" class="panel"><h2>Administrator login</h2><form id="login"><label>Email<input id="email" type="email" required autocomplete="username"></label><label>Password<input id="password" type="password" required autocomplete="current-password"></label><button>Sign in securely</button></form></section>
+<section id="dashboard" class="hidden"><section class="panel"><div class="title"><div><h2>Managed phones</h2><p>Basic is always included. Shopping and Business can be changed per phone.</p></div><button id="refresh" class="quiet">Refresh</button></div><div id="devices"></div></section></section><div id="notice"></div></main><script src="config.js"></script><script src="app.js"></script></body></html>
