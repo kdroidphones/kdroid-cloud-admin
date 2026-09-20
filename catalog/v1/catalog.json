@@ -1,6 +1,6 @@
 {
     "schemaVersion":  2,
-    "generatedAt":  "2026-09-20T22:38:24.7362327+00:00",
+    "generatedAt":  "2026-09-20T22:41:48.3853254+00:00",
     "apps":  [
                  {
                      "name":  "24Six",
@@ -809,8 +809,8 @@
                  {
                      "name":  "KosherAndriod Store Update",
                      "packageName":  "org.kosherandriod.store",
-                     "versionName":  "1.5.6",
-                     "versionCode":  56,
+                     "versionName":  "1.5.7",
+                     "versionCode":  57,
                      "description":  "Required Store update with approved update-link routing.",
                      "category":  "System",
                      "hidden":  true,
@@ -818,9 +818,9 @@
                      "apkFiles":  [
                                       {
                                           "name":  "base.apk",
-                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-org.kosherandriod.store-56/base.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-org.kosherandriod.store-57/base.apk",
                                           "size":  46128,
-                                          "sha256":  "23b44983e6280e5f2feba5f75fb7411148d90e33854582843bb7d7178a02007a"
+                                          "sha256":  "3876815cdc6c61b9b543b3618ada4ea311b8e1138757d8620477c77546c3f5de"
                                       }
                                   ],
                      "store":  "Basic"
