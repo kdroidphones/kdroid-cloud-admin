@@ -1,0 +1,905 @@
+{
+    "schemaVersion":  2,
+    "generatedAt":  "2026-09-20T22:38:24.7362327+00:00",
+    "apps":  [
+                 {
+                     "name":  "24Six",
+                     "packageName":  "app.tfs.prod",
+                     "versionName":  "66.3.19",
+                     "versionCode":  329,
+                     "description":  "",
+                     "category":  "Entertainment",
+                     "certificateSha256":  "bac989dcd40d08d4c314f74f8c4dc9b8d25d5c3e26feb0cd9cadbdaaee68bf63",
+                     "apkFiles":  [
+                                      {
+                                          "name":  "base.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-app.tfs.prod-329/base.apk",
+                                          "size":  40926694,
+                                          "sha256":  "c830e7367fb6fac93e8018d812ed5aed5bf5f4c2ad7866a65a5376094e145835"
+                                      },
+                                      {
+                                          "name":  "split_config.arm64_v8a.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-app.tfs.prod-329/split_config.arm64_v8a.apk",
+                                          "size":  57871,
+                                          "sha256":  "c44acbfc7da2890845208048983ba0b36a52b57d73a64f73057391f59d319812"
+                                      },
+                                      {
+                                          "name":  "split_config.xxhdpi.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-app.tfs.prod-329/split_config.xxhdpi.apk",
+                                          "size":  3130221,
+                                          "sha256":  "0df6bd5e0ee4088e57a70a40ec1950c5fc5cd16a18390066124637b06bc7b824"
+                                      }
+                                  ],
+                     "iconUrl":  "https://kdroid-cloud-admin.pages.dev/catalog/v1/icons/app.tfs.prod.png",
+                     "iconSha256":  "58f0fc69451b4361b272ba0490b0a6006c9e451b5e7b33b070b90dadfb425b3e",
+                     "store":  "Basic"
+                 },
+                 {
+                     "name":  "Airbnb",
+                     "packageName":  "com.airbnb.android",
+                     "versionName":  "26.36",
+                     "versionCode":  28025531,
+                     "description":  "Book homes and travel stays.",
+                     "category":  "Travel",
+                     "certificateSha256":  "437b7c9a946c3ce9f249a4308614f542c14d7c7a3bc97789984e0247cd2301fb",
+                     "apkFiles":  [
+                                      {
+                                          "name":  "base.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.airbnb.android-28025531/base.apk",
+                                          "size":  128504113,
+                                          "sha256":  "8b2ef10e43afed6e0f9676ea5fc9ba38f0434a38f6e10c3293d50319b0a4d3f1"
+                                      },
+                                      {
+                                          "name":  "split_config.arm64_v8a.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.airbnb.android-28025531/split_config.arm64_v8a.apk",
+                                          "size":  4375778,
+                                          "sha256":  "17936fe41f8c0a24500d2594bc3b0d45f27b76625326e8f0c5b271202e210f06"
+                                      },
+                                      {
+                                          "name":  "split_config.en.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.airbnb.android-28025531/split_config.en.apk",
+                                          "size":  430489,
+                                          "sha256":  "72594cbf127da3bb18b259860449663acc76a8b0bc76190e80cdbef71fb2c675"
+                                      },
+                                      {
+                                          "name":  "split_config.xxhdpi.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.airbnb.android-28025531/split_config.xxhdpi.apk",
+                                          "size":  812102,
+                                          "sha256":  "4b85bc55fca2a36f418fd3ab253738e6a1c4ec3a79a7aefa9a93913f8e3365b8"
+                                      },
+                                      {
+                                          "name":  "split_dynamic_china.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.airbnb.android-28025531/split_dynamic_china.apk",
+                                          "size":  12495,
+                                          "sha256":  "5b1d33a852dd0d2a27f37fb9e77e1efbd2dc33c0e9315911780b203ee84537bf"
+                                      },
+                                      {
+                                          "name":  "split_dynamic_host.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.airbnb.android-28025531/split_dynamic_host.apk",
+                                          "size":  23619605,
+                                          "sha256":  "06e645ef8911f3e40a490730fcdffed8614184411668e4a370bf2f8b922869e6"
+                                      },
+                                      {
+                                          "name":  "split_dynamic_host.config.en.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.airbnb.android-28025531/split_dynamic_host.config.en.apk",
+                                          "size":  233881,
+                                          "sha256":  "e933c82551017d08b351441dfbc4e1fdf5c452cb19db3f4e311a7f5b2180c1b3"
+                                      },
+                                      {
+                                          "name":  "split_dynamic_host.config.xxhdpi.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.airbnb.android-28025531/split_dynamic_host.config.xxhdpi.apk",
+                                          "size":  181084,
+                                          "sha256":  "af56f036ace5d258f62f28c704f642b0c60142c96c35691f59b0f83c2a7f016c"
+                                      },
+                                      {
+                                          "name":  "split_dynamic_stripe.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.airbnb.android-28025531/split_dynamic_stripe.apk",
+                                          "size":  1993975,
+                                          "sha256":  "1a72b372c2ccccdbeceec6bf621b14a927946d520b346c470609e858b95ba40d"
+                                      },
+                                      {
+                                          "name":  "split_dynamic_stripe.config.en.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.airbnb.android-28025531/split_dynamic_stripe.config.en.apk",
+                                          "size":  29081,
+                                          "sha256":  "1e9b7cc993b9456ae0651d5eb428443038bd650cf1a9add90c8b8846f83c1d82"
+                                      },
+                                      {
+                                          "name":  "split_dynamic_stripe.config.xxhdpi.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.airbnb.android-28025531/split_dynamic_stripe.config.xxhdpi.apk",
+                                          "size":  12697,
+                                          "sha256":  "bc0f49f8281eded3c01b570aa757230b5fb5566f81fed308937fa7d8d3ad780d"
+                                      },
+                                      {
+                                          "name":  "split_dynamic_tensorflow.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.airbnb.android-28025531/split_dynamic_tensorflow.apk",
+                                          "size":  20687,
+                                          "sha256":  "d88a16174efb65f4ebafc264f6f7dc4181083efa9cad38785ea2580963d1e337"
+                                      },
+                                      {
+                                          "name":  "split_dynamic_tensorflow.config.arm64_v8a.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.airbnb.android-28025531/split_dynamic_tensorflow.config.arm64_v8a.apk",
+                                          "size":  4350385,
+                                          "sha256":  "6df4c78af4baa0697e07105b5f32caf5163dcacf4a0f244f3f2165f67bf29879"
+                                      }
+                                  ],
+                     "store":  "Shopping"
+                 },
+                 {
+                     "name":  "Amazon Shopping",
+                     "packageName":  "com.amazon.mShop.android.shopping",
+                     "versionName":  "30.16.0.100",
+                     "versionCode":  1241301016,
+                     "description":  "Shop products from Amazon.",
+                     "category":  "Shopping",
+                     "certificateSha256":  "2f19adeb284eb36f7f07786152b9a1d14b21653203ad0b04ebbf9c73ab6d7625",
+                     "apkFiles":  [
+                                      {
+                                          "name":  "base.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.amazon.mshop.android.shopping-1241301016/base.apk",
+                                          "size":  47093503,
+                                          "sha256":  "e6082d67392ff7e7d4f4b33075273da819305c97c1361614a04656a7819fe66b"
+                                      },
+                                      {
+                                          "name":  "split_config.arm64_v8a.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.amazon.mshop.android.shopping-1241301016/split_config.arm64_v8a.apk",
+                                          "size":  56451374,
+                                          "sha256":  "14d5d16c68c7e2ea11bcf41f21c5a482c04c87e20e8254f676c3ba3d0496f33b"
+                                      },
+                                      {
+                                          "name":  "split_config.xxhdpi.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.amazon.mshop.android.shopping-1241301016/split_config.xxhdpi.apk",
+                                          "size":  3594571,
+                                          "sha256":  "b9ebaa0b7e6b3455bc4c72c59b725eda255e73044a4dff52cec3942c631e5bc6"
+                                      }
+                                  ],
+                     "store":  "Shopping"
+                 },
+                 {
+                     "name":  "ArtScroll Digital Library",
+                     "packageName":  "com.artscroll.digitallibrary",
+                     "versionName":  "7.5.0",
+                     "versionCode":  175,
+                     "description":  "",
+                     "category":  "Jewish",
+                     "certificateSha256":  "fd5bf7ad8ca116bc8bb2ec203abe31f1beb7f2162b028cd62a519c7c8bb37c07",
+                     "apkFiles":  [
+                                      {
+                                          "name":  "base.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.artscroll.digitallibrary-175/base.apk",
+                                          "size":  90061866,
+                                          "sha256":  "8b06af424995dc2e86070aceae0700cc8f5440c1073b3a3ad888839136f70ac1"
+                                      }
+                                  ],
+                     "iconUrl":  "https://kdroid-cloud-admin.pages.dev/catalog/v1/icons/com.artscroll.digitallibrary.png",
+                     "iconSha256":  "3c02ae17286764950c1e13f980b6a869e8be533911a9d0c63d8a9d23c639b6ae",
+                     "store":  "Basic"
+                 },
+                 {
+                     "name":  "Costco",
+                     "packageName":  "com.costco.app.android",
+                     "versionName":  "25.6.2.1",
+                     "versionCode":  35211,
+                     "description":  "Costco shopping and membership services.",
+                     "category":  "Shopping",
+                     "certificateSha256":  "cec08537be5151905759a0e0301669582eff8e6b98b6676bbd0a654a535245fc",
+                     "apkFiles":  [
+                                      {
+                                          "name":  "base.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.costco.app.android-35211/base.apk",
+                                          "size":  57446199,
+                                          "sha256":  "1008621f1c0547cf905eaf349b352d6143d1c976ab3eeea7e4f6d77463198391"
+                                      }
+                                  ],
+                     "store":  "Shopping"
+                 },
+                 {
+                     "name":  "ecobee",
+                     "packageName":  "com.ecobee.athenamobile",
+                     "versionName":  "26.15.0",
+                     "versionCode":  73500931,
+                     "description":  "Manage ecobee home devices.",
+                     "category":  "Home",
+                     "certificateSha256":  "694ec7e43314fcf0e91a34d52fe7a9efc65c4c33bd69c5717c9d931cfff6e976",
+                     "apkFiles":  [
+                                      {
+                                          "name":  "base.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.ecobee.athenamobile-73500931/base.apk",
+                                          "size":  89614704,
+                                          "sha256":  "2db90822e4edbaf90b605288a2c6293d60b335c5c84e9b1af66fc3b4fc45c204"
+                                      },
+                                      {
+                                          "name":  "split_config.arm64_v8a.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.ecobee.athenamobile-73500931/split_config.arm64_v8a.apk",
+                                          "size":  17974450,
+                                          "sha256":  "e1bc1b08801bfb2faa9876a90198dd174aa5d0e8483ba247b91eb695e47dd442"
+                                      },
+                                      {
+                                          "name":  "split_config.xxhdpi.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.ecobee.athenamobile-73500931/split_config.xxhdpi.apk",
+                                          "size":  30520183,
+                                          "sha256":  "68f841b94e21496a711b69c3d10f4917cf8205d0e7e67c73123e64dff3860b5c"
+                                      }
+                                  ],
+                     "store":  "Shopping"
+                 },
+                 {
+                     "name":  "Zmanim",
+                     "packageName":  "com.gindin.zmanim.android",
+                     "versionName":  "4.0.401",
+                     "versionCode":  401,
+                     "description":  "",
+                     "category":  "Jewish",
+                     "certificateSha256":  "5d569a66c2a39184bcaef675e49d0b5e6859322268506bfcff5862cfd636725a",
+                     "apkFiles":  [
+                                      {
+                                          "name":  "base.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.gindin.zmanim.android-401/base.apk",
+                                          "size":  4560571,
+                                          "sha256":  "6f4d8b19e08a7a18b5a854a18855626cd23d974b9f7fba47479fb918b6fcee49"
+                                      }
+                                  ],
+                     "iconUrl":  "https://kdroid-cloud-admin.pages.dev/catalog/v1/icons/com.gindin.zmanim.android.png",
+                     "iconSha256":  "a72610f3adcc7ea60e6d34137d3f17fc6a8bf8266049b2df9d8c5505d1c15b82",
+                     "store":  "Basic"
+                 },
+                 {
+                     "name":  "Google Maps",
+                     "packageName":  "com.google.android.apps.maps",
+                     "versionName":  "26.29.02.946673643",
+                     "versionCode":  1068682103,
+                     "description":  "Google Maps navigation and directions.",
+                     "category":  "Navigation",
+                     "certificateSha256":  "7ce83c1b71f3d572fed04c8d40c5cb10ff75e6d87d9df6fbd53f0468c2905053",
+                     "apkFiles":  [
+                                      {
+                                          "name":  "base.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.google.android.apps.maps-1068682103/base.apk",
+                                          "size":  79556885,
+                                          "sha256":  "b59cb78b2c601107c6d8037ff30b2cf651272e8dd8b37e4c78c66cb4684d5372"
+                                      },
+                                      {
+                                          "name":  "split_config.arm64_v8a.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.google.android.apps.maps-1068682103/split_config.arm64_v8a.apk",
+                                          "size":  40453712,
+                                          "sha256":  "1cc2237f275543c94043c5af2d650741047f212256145955959318ab1ce8f33b"
+                                      },
+                                      {
+                                          "name":  "split_config.en.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.google.android.apps.maps-1068682103/split_config.en.apk",
+                                          "size":  1282258,
+                                          "sha256":  "35a47858485d7303c1df1b9180df321944bd616aff6e20cd8edd018de181c2a4"
+                                      },
+                                      {
+                                          "name":  "split_config.xxhdpi.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.google.android.apps.maps-1068682103/split_config.xxhdpi.apk",
+                                          "size":  1689135,
+                                          "sha256":  "493cdfca923e312d76762f24092e12083a838f548294b1082c834d36c8a12793"
+                                      }
+                                  ],
+                     "store":  "Basic"
+                 },
+                 {
+                     "name":  "Translate",
+                     "packageName":  "com.google.android.apps.translate",
+                     "versionName":  "10.31.78.964684200.6-release",
+                     "versionCode":  700918002,
+                     "description":  "",
+                     "category":  "Utilities",
+                     "certificateSha256":  "3d7a1223019aa39d9ea0e3436ab7c0896bfb4fb679f4de5fe7c23f326c8f994a",
+                     "apkFiles":  [
+                                      {
+                                          "name":  "base.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.google.android.apps.translate-700918002/base.apk",
+                                          "size":  52324858,
+                                          "sha256":  "d71c50f2bbac91d69303277b38ff549e9239625769c9c574ec8bd86eedcbf5b2"
+                                      }
+                                  ],
+                     "iconUrl":  "https://kdroid-cloud-admin.pages.dev/catalog/v1/icons/com.google.android.apps.translate.png",
+                     "iconSha256":  "bab3e00d2fcfa5526c00cde1ca36e7cf3772c72f19847fe628623356d49df7f1",
+                     "store":  "Basic"
+                 },
+                 {
+                     "name":  "Google Pay",
+                     "packageName":  "com.google.android.apps.walletnfcrel",
+                     "versionName":  "26.28.944947626",
+                     "versionCode":  933714853,
+                     "description":  "",
+                     "category":  "Finance",
+                     "certificateSha256":  "77bd897c29730203a548d591a0783e08626c2a54bc22c80ea47ed8863697380c",
+                     "apkFiles":  [
+                                      {
+                                          "name":  "base.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.google.android.apps.walletnfcrel-933714853/base.apk",
+                                          "size":  40884469,
+                                          "sha256":  "102f650d4066b1293129f516104f0806bcaf67b598f1ada2797b5c4ac7b04d99"
+                                      },
+                                      {
+                                          "name":  "split_config.arm64_v8a.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.google.android.apps.walletnfcrel-933714853/split_config.arm64_v8a.apk",
+                                          "size":  1561166,
+                                          "sha256":  "f0c53b01933ef1b075d87d45ab84d9fe7aeea35c2517c06587292eb2b30a2fe0"
+                                      },
+                                      {
+                                          "name":  "split_config.xxhdpi.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.google.android.apps.walletnfcrel-933714853/split_config.xxhdpi.apk",
+                                          "size":  497228,
+                                          "sha256":  "25af8d120ae269a6bb8c53f634b494a1f8fe7fc26c741fee2a5d6cd05e1a1089"
+                                      }
+                                  ],
+                     "iconUrl":  "https://kdroid-cloud-admin.pages.dev/catalog/v1/icons/com.google.android.apps.walletnfcrel.png",
+                     "iconSha256":  "292581b812de0009cd9dcab1050b3430ba7a1731372e9c15eecbb353b92971aa",
+                     "store":  "Shopping"
+                 },
+                 {
+                     "name":  "Smart Siddur",
+                     "packageName":  "com.karriapps.smartsiddurlite",
+                     "versionName":  "7.5.286",
+                     "versionCode":  286,
+                     "description":  "",
+                     "category":  "Jewish",
+                     "certificateSha256":  "c72de921e8d896bfd7ce22a08bec5475a9e8ab6a59bfc975f6932bed73b244fa",
+                     "apkFiles":  [
+                                      {
+                                          "name":  "base.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.karriapps.smartsiddurlite-286/base.apk",
+                                          "size":  43176437,
+                                          "sha256":  "71eb098cb1eb970b71aee0ad3d600d395ae7c454307c48c4591760481127ddd9"
+                                      },
+                                      {
+                                          "name":  "split_config.arm64_v8a.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.karriapps.smartsiddurlite-286/split_config.arm64_v8a.apk",
+                                          "size":  33142,
+                                          "sha256":  "c3d6e19ae058d700fe0d2a41f7227103a5635f4586dae17ff846f24ec4908a26"
+                                      },
+                                      {
+                                          "name":  "split_config.xxhdpi.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.karriapps.smartsiddurlite-286/split_config.xxhdpi.apk",
+                                          "size":  311206,
+                                          "sha256":  "2008bae2700767822426cc4d77bc33cda72d3e57d44b8b0086074964fddb1760"
+                                      }
+                                  ],
+                     "iconUrl":  "https://kdroid-cloud-admin.pages.dev/catalog/v1/icons/com.karriapps.smartsiddurlite.png",
+                     "iconSha256":  "2fa786dac1ddfceaf0a98ad4d8ad058acc6fa8e906f60ff6bfbecf0e222fa7b5",
+                     "store":  "Basic"
+                 },
+                 {
+                     "name":  "Kosher GPS",
+                     "packageName":  "com.kosherapp.two",
+                     "versionName":  "10.1.9",
+                     "versionCode":  43,
+                     "description":  "",
+                     "category":  "Navigation",
+                     "certificateSha256":  "4617671c25375714c09c4b32e2b939c3778fe00756234896bb1fbe46451b17e9",
+                     "apkFiles":  [
+                                      {
+                                          "name":  "base.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.kosherapp.two-43/base.apk",
+                                          "size":  24583713,
+                                          "sha256":  "2dc178a6cf8588b104fa8d47297ef724040cebea03731069b13ca5096650ab2d"
+                                      },
+                                      {
+                                          "name":  "split_config.en.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.kosherapp.two-43/split_config.en.apk",
+                                          "size":  37273,
+                                          "sha256":  "66bf5ddfef35cc36f8580210194ef8b1012259ec9adfe5f41bf1866fc552063d"
+                                      },
+                                      {
+                                          "name":  "split_config.es.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.kosherapp.two-43/split_config.es.apk",
+                                          "size":  24985,
+                                          "sha256":  "15f1ce3a60496161569ca90c12d3aebe07dc5c60c79483828ca04835b6351b01"
+                                      },
+                                      {
+                                          "name":  "split_config.xxhdpi.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.kosherapp.two-43/split_config.xxhdpi.apk",
+                                          "size":  262242,
+                                          "sha256":  "9e938745c0d98380e4e6bfa4194e6a88aa6c21f00761218c00f9534cd95a24b9"
+                                      }
+                                  ],
+                     "iconUrl":  "https://kdroid-cloud-admin.pages.dev/catalog/v1/icons/com.kosherapp.two.png",
+                     "iconSha256":  "86d884dadb6a0b580238184e38411781f46989a2d652966b0842e1f2302bbdf2",
+                     "store":  "Basic"
+                 },
+                 {
+                     "name":  "Microsoft Outlook",
+                     "packageName":  "com.microsoft.office.outlook",
+                     "versionName":  "5.2628.1",
+                     "versionCode":  42628013,
+                     "description":  "Email and calendar from Microsoft.",
+                     "category":  "Productivity",
+                     "certificateSha256":  "b925136f3ea7c0a1951690a1ab313910da81f40994a85342ec622888f1287051",
+                     "apkFiles":  [
+                                      {
+                                          "name":  "base.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.microsoft.office.outlook-42628013/base.apk",
+                                          "size":  130794662,
+                                          "sha256":  "8bcd6c0ff3d928cf70b78929d8d7d29fba6934fe5239aa929c042b178e0f35a3"
+                                      }
+                                  ],
+                     "store":  "Business"
+                 },
+                 {
+                     "name":  "Microsoft OneDrive",
+                     "packageName":  "com.microsoft.skydrive",
+                     "versionName":  "7.34",
+                     "versionCode":  2027340202,
+                     "description":  "Cloud file storage from Microsoft.",
+                     "category":  "Productivity",
+                     "certificateSha256":  "a0794215278a567e887af6cde015a5e88414ef640f7dab3855a3e779658be778",
+                     "apkFiles":  [
+                                      {
+                                          "name":  "base.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.microsoft.skydrive-2027340202/base.apk",
+                                          "size":  106056973,
+                                          "sha256":  "fe50ef634b16a0f002f939ab5958db582f25932902a12600e688a28f738cd3a0"
+                                      }
+                                  ],
+                     "store":  "Business"
+                 },
+                 {
+                     "name":  "Ring",
+                     "packageName":  "com.ringapp",
+                     "versionName":  "3.111.1",
+                     "versionCode":  70496554,
+                     "description":  "Manage Ring home security devices.",
+                     "category":  "Home",
+                     "certificateSha256":  "c63707c900141b807749c6038e215c9b2171262b0da9afc575fa60abc4d68deb",
+                     "apkFiles":  [
+                                      {
+                                          "name":  "base.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.ringapp-70496554/base.apk",
+                                          "size":  219477385,
+                                          "sha256":  "a571ee450088d5bad850c83e92e6df98f032885f126100abbc85d6f5e1f96e51"
+                                      },
+                                      {
+                                          "name":  "split_config.arm64_v8a.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.ringapp-70496554/split_config.arm64_v8a.apk",
+                                          "size":  35691199,
+                                          "sha256":  "14db67ce311f23756826fdc7fceb2d05d51d87acb00c05cd358f8df0d1f38bea"
+                                      },
+                                      {
+                                          "name":  "split_config.xxhdpi.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.ringapp-70496554/split_config.xxhdpi.apk",
+                                          "size":  6650675,
+                                          "sha256":  "1b0dc0c7520185026d875c34bb33d1b10e843e66f6b0c40e1b2ab55523edca62"
+                                      }
+                                  ],
+                     "store":  "Shopping"
+                 },
+                 {
+                     "name":  "SMS Backup \u0026 Restore",
+                     "packageName":  "com.riteshsahu.SMSBackupRestore",
+                     "versionName":  "10.26.007",
+                     "versionCode":  1026007,
+                     "description":  "",
+                     "category":  "Utilities",
+                     "store":  "Basic",
+                     "certificateSha256":  "f447dc1166227be1bce3441f38d8cdfa799a4f7d1458da15ae33c3f77c38ed0a",
+                     "apkFiles":  [
+                                      {
+                                          "name":  "base.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.riteshsahu.smsbackuprestore-1026007/base.apk",
+                                          "size":  21433302,
+                                          "sha256":  "4fc13aaf9a76eeb2eb500a994ee49cf0e37514125388bcaed02314188b1a8198"
+                                      }
+                                  ],
+                     "iconUrl":  "https://kdroid-cloud-admin.pages.dev/catalog/v1/icons/com.riteshsahu.SMSBackupRestore.png",
+                     "iconSha256":  "f7bcb75946ecc0c37fdd489f428dd7c44520db9f1fa9359189dd14e04b4fd904"
+                 },
+                 {
+                     "name":  "Target",
+                     "packageName":  "com.target.ui",
+                     "versionName":  "2024.34.1",
+                     "versionCode":  1906002608,
+                     "description":  "Shop products from Target.",
+                     "category":  "Shopping",
+                     "certificateSha256":  "c20f71d425625357f0c0523ae1c220c59e22e49a94bc9f266f9c97773689a09b",
+                     "apkFiles":  [
+                                      {
+                                          "name":  "base.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.target.ui-1906002608/base.apk",
+                                          "size":  29643768,
+                                          "sha256":  "b151329d4162859d7a2c1a8f1d5d8030b00f28baee5ccae6bd29fe438cf7594d"
+                                      },
+                                      {
+                                          "name":  "split_config.arm64_v8a.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.target.ui-1906002608/split_config.arm64_v8a.apk",
+                                          "size":  5055689,
+                                          "sha256":  "427cab218e36c0f2d4f8b8f4aee9f72d8d462d88b7038dbc44c94d3ae3317644"
+                                      },
+                                      {
+                                          "name":  "split_config.en.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.target.ui-1906002608/split_config.en.apk",
+                                          "size":  352665,
+                                          "sha256":  "df14b54d19cadff1a388b5ea41d12db6b170fef79088c58dd8481b2d36d700d0"
+                                      },
+                                      {
+                                          "name":  "split_config.xxhdpi.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.target.ui-1906002608/split_config.xxhdpi.apk",
+                                          "size":  1990250,
+                                          "sha256":  "4acee2a72dc7d123a0c6c4788db668b382c39f9e40ad452bd996ab4b477b35f6"
+                                      }
+                                  ],
+                     "store":  "Shopping"
+                 },
+                 {
+                     "name":  "Tesla",
+                     "packageName":  "com.teslamotors.tesla",
+                     "versionName":  "4.36.7-2856",
+                     "versionCode":  2856,
+                     "description":  "",
+                     "category":  "Transportation",
+                     "certificateSha256":  "f27a58479622c8d7bfcd87cb30e9800915761191f6ef7b268e30476e9d7a0e71",
+                     "apkFiles":  [
+                                      {
+                                          "name":  "base.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.teslamotors.tesla-2856/base.apk",
+                                          "size":  175093278,
+                                          "sha256":  "133d71fb95bb59b245363bc1dde7e274a5a0764cc0f1bead1bae3c598eb4ca4e"
+                                      },
+                                      {
+                                          "name":  "split_config.arm64_v8a.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.teslamotors.tesla-2856/split_config.arm64_v8a.apk",
+                                          "size":  71952912,
+                                          "sha256":  "f940ddcc29117275aff44c7c5f1e08784c20a26c2509096db8881db22b149d6c"
+                                      },
+                                      {
+                                          "name":  "split_config.en.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.teslamotors.tesla-2856/split_config.en.apk",
+                                          "size":  131481,
+                                          "sha256":  "489625d3cf34e42a6a0991ddb498cd9720fd8ec8dca59ecce3a1b144bf78159b"
+                                      },
+                                      {
+                                          "name":  "split_config.xxhdpi.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.teslamotors.tesla-2856/split_config.xxhdpi.apk",
+                                          "size":  499497,
+                                          "sha256":  "b0ff613357c185b373a4ed58471f028dc360cbb59209aef43786c980efbc40b7"
+                                      }
+                                  ],
+                     "iconUrl":  "https://kdroid-cloud-admin.pages.dev/catalog/v1/icons/com.teslamotors.tesla.png",
+                     "iconSha256":  "70d30108a1ecea8502a1b8f6fd527b29667b7ddec28896ea2d92ee13f4117a76",
+                     "dependencies":  [
+                                          "org.kosherandriod.authbrowser"
+                                      ],
+                     "store":  "Shopping"
+                 },
+                 {
+                     "name":  "TorahAnytime",
+                     "packageName":  "com.torahanytime.betaapp",
+                     "versionName":  "3.4.12",
+                     "versionCode":  550030412,
+                     "description":  "",
+                     "category":  "Torah",
+                     "certificateSha256":  "8ef2c96750a60c0d6cb5b3a9572a665d0afc253eb363a8c14220e17178feb369",
+                     "apkFiles":  [
+                                      {
+                                          "name":  "base.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.torahanytime.betaapp-550030412/base.apk",
+                                          "size":  33758275,
+                                          "sha256":  "5d1c148333cf006345c09f90e4d67c0ee7369b7ffffdf9ad1276146f59389eb2"
+                                      },
+                                      {
+                                          "name":  "split_config.arm64_v8a.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.torahanytime.betaapp-550030412/split_config.arm64_v8a.apk",
+                                          "size":  26831362,
+                                          "sha256":  "7223b4c13dacb6a7b78486c41b26587715fa655a482fec3553d7feab1971de86"
+                                      },
+                                      {
+                                          "name":  "split_config.en.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.torahanytime.betaapp-550030412/split_config.en.apk",
+                                          "size":  61849,
+                                          "sha256":  "2ef1074651a2c298a50a504a0461f086de6a23411e28fd6a98ad3156cfcca8ae"
+                                      },
+                                      {
+                                          "name":  "split_config.xxhdpi.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.torahanytime.betaapp-550030412/split_config.xxhdpi.apk",
+                                          "size":  276604,
+                                          "sha256":  "f7a4b43083b51fe4aa5a75ce4f21302918396d93f0f2afcb677c265d2fb53148"
+                                      }
+                                  ],
+                     "iconUrl":  "https://kdroid-cloud-admin.pages.dev/catalog/v1/icons/com.torahanytime.betaapp.png",
+                     "iconSha256":  "f7ce446e9afee9564654eb0300067645767da7d61365163af533dd83eb6e24aa",
+                     "store":  "Basic"
+                 },
+                 {
+                     "name":  "Uber",
+                     "packageName":  "com.ubercab",
+                     "versionName":  "4.544.10000",
+                     "versionCode":  199501,
+                     "description":  "",
+                     "category":  "Transportation",
+                     "certificateSha256":  "4003231ab42feb8d955e62fdfaa4fad59567054b9c6bbc3d950299ddfc268392",
+                     "apkFiles":  [
+                                      {
+                                          "name":  "base.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.ubercab-199501/base.apk",
+                                          "size":  91176349,
+                                          "sha256":  "93dfbf77a6502f4b8aec6b72bb441dad64a213e30e797836a1738c73b9eab7ca"
+                                      },
+                                      {
+                                          "name":  "split_BarcodeScanner.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.ubercab-199501/split_BarcodeScanner.apk",
+                                          "size":  926237,
+                                          "sha256":  "fe7b703c03bedc9efd8c7912528e55c4949458aa67342cc7f804a658d2c8f05a"
+                                      },
+                                      {
+                                          "name":  "split_BarcodeScanner.config.arm64_v8a.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.ubercab-199501/split_BarcodeScanner.config.arm64_v8a.apk",
+                                          "size":  4374955,
+                                          "sha256":  "5d753920d6f0e3a0c94aeabdf4b17286db8156b21677e765a48bd1256d21e179"
+                                      },
+                                      {
+                                          "name":  "split_BarcodeScanner.config.xxhdpi.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.ubercab-199501/split_BarcodeScanner.config.xxhdpi.apk",
+                                          "size":  12697,
+                                          "sha256":  "0a7238f8f25dc81ea99d5e5121c567c1de49e6694b8081320f5e03a3a06c149e"
+                                      },
+                                      {
+                                          "name":  "split_config.arm64_v8a.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.ubercab-199501/split_config.arm64_v8a.apk",
+                                          "size":  24381524,
+                                          "sha256":  "81c07987b42ee19f79766553297f8deaa6669ed53784d6273aea5a668d03254f"
+                                      },
+                                      {
+                                          "name":  "split_config.en.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.ubercab-199501/split_config.en.apk",
+                                          "size":  1581465,
+                                          "sha256":  "c2fe8637c74ac2eb22dc7ef15a1afa92a7fd90a31a1129d249de585597b5c8b3"
+                                      },
+                                      {
+                                          "name":  "split_config.xxhdpi.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.ubercab-199501/split_config.xxhdpi.apk",
+                                          "size":  1338687,
+                                          "sha256":  "0a47d6a0427bd420f552dd8baa5cc7633e4b3318661fad9f8bfcf844b7eb92bc"
+                                      },
+                                      {
+                                          "name":  "split_GoogleAds.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.ubercab-199501/split_GoogleAds.apk",
+                                          "size":  1601743,
+                                          "sha256":  "bc23b1676f6e93817a1293f479e846201cf29c152f148cf915a4a513ac1a024d"
+                                      },
+                                      {
+                                          "name":  "split_GoogleAds.config.xxhdpi.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.ubercab-199501/split_GoogleAds.config.xxhdpi.apk",
+                                          "size":  12697,
+                                          "sha256":  "01a9af573910bd272e9cbf44c3757664c5e3d1f5daf6b31ab3753687b95162e2"
+                                      },
+                                      {
+                                          "name":  "split_GooglePaySdk.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.ubercab-199501/split_GooglePaySdk.apk",
+                                          "size":  49359,
+                                          "sha256":  "ffa9fd5202a89001d2d66992ee3981226bdb8f946f2b2faf95cf6a23dd682f4d"
+                                      },
+                                      {
+                                          "name":  "split_GooglePaySdk.config.xxhdpi.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.ubercab-199501/split_GooglePaySdk.config.xxhdpi.apk",
+                                          "size":  12697,
+                                          "sha256":  "74ab4be8fa8b6b33413fd91bd2cfcee253a3fc405eb760610c56287f5a0912e6"
+                                      },
+                                      {
+                                          "name":  "split_VoipTwilio.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.ubercab-199501/split_VoipTwilio.apk",
+                                          "size":  147663,
+                                          "sha256":  "1796a381a0a12652a01f713f2f96fa25d79e26db683954c43ed7cc747cd7f91e"
+                                      },
+                                      {
+                                          "name":  "split_VoipTwilio.config.arm64_v8a.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.ubercab-199501/split_VoipTwilio.config.arm64_v8a.apk",
+                                          "size":  10817974,
+                                          "sha256":  "f1223fb4104dd619b7e0bf4f419aba0baa896fd5cd6bb491c39456c91877dbb1"
+                                      },
+                                      {
+                                          "name":  "split_VoipTwilio.config.xxhdpi.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.ubercab-199501/split_VoipTwilio.config.xxhdpi.apk",
+                                          "size":  12697,
+                                          "sha256":  "6d3c29165d3d7232f66d562a1a11b6e8e6b09e096bf807efd7bbe0f047331dfc"
+                                      }
+                                  ],
+                     "iconUrl":  "https://kdroid-cloud-admin.pages.dev/catalog/v1/icons/com.ubercab.png",
+                     "iconSha256":  "4a9113b9b1a2125dd52e3dd2efe493f71dc411d6aecc8d02919ad891555598dd",
+                     "store":  "Shopping"
+                 },
+                 {
+                     "name":  "Walmart",
+                     "packageName":  "com.walmart.android",
+                     "versionName":  "26.33.1",
+                     "versionCode":  26330126,
+                     "description":  "Shop products from Walmart.",
+                     "category":  "Shopping",
+                     "certificateSha256":  "f3cfe9b27cf77a414051734b6a07422ed8b8ed71de02e0d1e8a36994c15a17a2",
+                     "apkFiles":  [
+                                      {
+                                          "name":  "base.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.walmart.android-26330126/base.apk",
+                                          "size":  331261911,
+                                          "sha256":  "840fbfb41753acc575128f6641a64325e501d68cd0eb6715c1ab88d0cf030b9b"
+                                      },
+                                      {
+                                          "name":  "split_config.arm64_v8a.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.walmart.android-26330126/split_config.arm64_v8a.apk",
+                                          "size":  13789405,
+                                          "sha256":  "67c8a54ca601ae01c26ae213f414d6476f071c0fcab4987c079e04f8b180c126"
+                                      },
+                                      {
+                                          "name":  "split_config.xxhdpi.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.walmart.android-26330126/split_config.xxhdpi.apk",
+                                          "size":  5323609,
+                                          "sha256":  "033c9ac5d361c078e456c8a9764f6401cad48ae94397faedaa850ebf5055b429"
+                                      }
+                                  ],
+                     "store":  "Shopping"
+                 },
+                 {
+                     "name":  "Waze",
+                     "packageName":  "com.waze",
+                     "versionName":  "5.21.0.0",
+                     "versionCode":  1030711,
+                     "description":  "",
+                     "category":  "Navigation",
+                     "certificateSha256":  "03637f6c5d8f604e6fdb79a6ffbfa578de4e318f8da22fc6106665247f8807d7",
+                     "apkFiles":  [
+                                      {
+                                          "name":  "base.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.waze-1030711/base.apk",
+                                          "size":  90788367,
+                                          "sha256":  "a882088d38dfb7c9609ed59c82f7ff27816e7ce0e6e55b3c624c4042ead4361b"
+                                      },
+                                      {
+                                          "name":  "split_config.arm64_v8a.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.waze-1030711/split_config.arm64_v8a.apk",
+                                          "size":  86680367,
+                                          "sha256":  "ea29322845a55d744091fc8a7000700af49c93b5ffa5d48167a140ad7ec8e967"
+                                      },
+                                      {
+                                          "name":  "split_config.en.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.waze-1030711/split_config.en.apk",
+                                          "size":  200914,
+                                          "sha256":  "5aafd35a4f886110869f3f464b895ecb0a932df5c129818508a19d1d100c974f"
+                                      },
+                                      {
+                                          "name":  "split_config.xxhdpi.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-com.waze-1030711/split_config.xxhdpi.apk",
+                                          "size":  8540246,
+                                          "sha256":  "edeb348636c650383b4b3b6506e6eae32bd5c414a44801133c0d4526bcf42f7a"
+                                      }
+                                  ],
+                     "iconUrl":  "https://kdroid-cloud-admin.pages.dev/catalog/v1/icons/com.waze.png",
+                     "iconSha256":  "33de06d482648dc83acf430735eea49031f1fe2e373b79c7c96f8b070a47c92c",
+                     "store":  "Basic"
+                 },
+                 {
+                     "name":  "Musicolet",
+                     "packageName":  "in.krosbits.musicolet",
+                     "versionName":  "6.9 build445",
+                     "versionCode":  44500,
+                     "description":  "",
+                     "category":  "Utilities",
+                     "certificateSha256":  "8a4d4121f541e3644c1fd1e5c3502eb4bea49792cafd26e600d413cd1f10851f",
+                     "apkFiles":  [
+                                      {
+                                          "name":  "base.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-in.krosbits.musicolet-44500/base.apk",
+                                          "size":  19888883,
+                                          "sha256":  "e80946e53fb0e1f3a5778bfd56da58ef06039eab9a3714da9bfa7ab5f61dc1d1"
+                                      }
+                                  ],
+                     "iconUrl":  "https://kdroid-cloud-admin.pages.dev/catalog/v1/icons/in.krosbits.musicolet.png",
+                     "iconSha256":  "f3a2f9368a42682cda86ee6f026b50c4e717085a5cacf412f30a618e11d41cdb",
+                     "store":  "Basic"
+                 },
+                 {
+                     "name":  "Secure sign-in component",
+                     "packageName":  "org.kosherandriod.authbrowser",
+                     "versionName":  "1.1",
+                     "versionCode":  2,
+                     "description":  "Restricted sign-in support for approved apps.",
+                     "category":  "System",
+                     "hidden":  true,
+                     "certificateSha256":  "c8a2e9bccf597c2fb6dc66bee293fc13f2fc47ec77bc6b2b0d52c11f51192ab8",
+                     "apkFiles":  [
+                                      {
+                                          "name":  "base.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-org.kosherandriod.authbrowser-2/base.apk",
+                                          "size":  12715,
+                                          "sha256":  "b72333948d873b4a92f5deba852a1c8c99d2128393f3b51193396873d68e4296"
+                                      }
+                                  ],
+                     "store":  "Basic"
+                 },
+                 {
+                     "name":  "KosherAndriod Store Update",
+                     "packageName":  "org.kosherandriod.store",
+                     "versionName":  "1.5.6",
+                     "versionCode":  56,
+                     "description":  "Required Store update with approved update-link routing.",
+                     "category":  "System",
+                     "hidden":  true,
+                     "certificateSha256":  "c8a2e9bccf597c2fb6dc66bee293fc13f2fc47ec77bc6b2b0d52c11f51192ab8",
+                     "apkFiles":  [
+                                      {
+                                          "name":  "base.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-org.kosherandriod.store-56/base.apk",
+                                          "size":  46128,
+                                          "sha256":  "23b44983e6280e5f2feba5f75fb7411148d90e33854582843bb7d7178a02007a"
+                                      }
+                                  ],
+                     "store":  "Basic"
+                 },
+                 {
+                     "name":  "Sefaria",
+                     "packageName":  "org.sefaria.sefaria",
+                     "versionName":  "6.7.12",
+                     "versionCode":  62061075,
+                     "description":  "",
+                     "category":  "Books \u0026 Reference",
+                     "certificateSha256":  "fd86ba9963c271d95fe60d0b0fa167ea261545be0cd0df696401f3add0eec687",
+                     "apkFiles":  [
+                                      {
+                                          "name":  "base.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-org.sefaria.sefaria-62061075/base.apk",
+                                          "size":  37739808,
+                                          "sha256":  "621af5c07e1e27b577b9e5c33b7b5064c58d4e03fb392387bced25daf2ae6f12"
+                                      },
+                                      {
+                                          "name":  "split_config.arm64_v8a.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-org.sefaria.sefaria-62061075/split_config.arm64_v8a.apk",
+                                          "size":  15591259,
+                                          "sha256":  "fef9c4d96b0e7940a4d53f47c8d5047b0b8aa19668db3081d01f7a320ee8ea5f"
+                                      },
+                                      {
+                                          "name":  "split_config.en.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-org.sefaria.sefaria-62061075/split_config.en.apk",
+                                          "size":  37273,
+                                          "sha256":  "a3a3675809f26f3bb6d04e38df0aba82ea2d6b9993a6549b3eae068774e7243b"
+                                      },
+                                      {
+                                          "name":  "split_config.es.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-org.sefaria.sefaria-62061075/split_config.es.apk",
+                                          "size":  24985,
+                                          "sha256":  "12e345a8d0f7360fa6ab6de90391113b2f3a08d6265e6c0f3818b3f1ba5097fc"
+                                      },
+                                      {
+                                          "name":  "split_config.xxhdpi.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-org.sefaria.sefaria-62061075/split_config.xxhdpi.apk",
+                                          "size":  196868,
+                                          "sha256":  "b86c97bb1cf7317d8245d035702c4fa1274805406cdccc634db5da702f6f658d"
+                                      }
+                                  ],
+                     "iconUrl":  "https://kdroid-cloud-admin.pages.dev/catalog/v1/icons/org.sefaria.sefaria.png",
+                     "iconSha256":  "849873594b87235e5431766b2c09d445757ac67ec04e77fef56dbee2bdcb1e06",
+                     "store":  "Basic"
+                 },
+                 {
+                     "name":  "Zoom",
+                     "packageName":  "us.zoom.videomeetings",
+                     "versionName":  "7.0.5.40164",
+                     "versionCode":  6700050,
+                     "description":  "",
+                     "category":  "Communication",
+                     "certificateSha256":  "60b75724b34686e52bde944969de120f16bd6d959788d54384494caedd4e445d",
+                     "apkFiles":  [
+                                      {
+                                          "name":  "base.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-us.zoom.videomeetings-6700050/base.apk",
+                                          "size":  152528781,
+                                          "sha256":  "246258af06b886aed41bed691c22fc32f8a14b96ebada8c72d86bd76035d10ab"
+                                      },
+                                      {
+                                          "name":  "split_config.arm64_v8a.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-us.zoom.videomeetings-6700050/split_config.arm64_v8a.apk",
+                                          "size":  120984398,
+                                          "sha256":  "ccd608a1acc41290018706cc675fd17ab81bb6854b4bd3a540a8420c28c23624"
+                                      },
+                                      {
+                                          "name":  "split_config.xxhdpi.apk",
+                                          "url":  "https://github.com/kdroidphones/kdroid-apps/releases/download/app-us.zoom.videomeetings-6700050/split_config.xxhdpi.apk",
+                                          "size":  1533231,
+                                          "sha256":  "de14c42ef03e3187f92871ec74656365ecd616892728c6910bdea357fd2d66f2"
+                                      }
+                                  ],
+                     "iconUrl":  "https://kdroid-cloud-admin.pages.dev/catalog/v1/icons/us.zoom.videomeetings.png",
+                     "iconSha256":  "6abad09cb0a3da8161412fca1fcdc703cf67851a079a64bfdb567afce2463749",
+                     "store":  "Business"
+                 }
+             ]
+}
