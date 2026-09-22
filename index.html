@@ -15,6 +15,7 @@
   <nav class="view-switch" aria-label="Administrator sections">
     <button id="show-phones" class="view-button active" aria-pressed="true">Phones</button>
     <button id="show-apps" class="view-button" aria-pressed="false">Apps</button>
+    <button id="show-updates" class="view-button" aria-pressed="false">Updates</button>
   </nav>
 
   <section id="phone-view">
@@ -47,6 +48,12 @@
       <label class="search-label" for="app-search">Search apps</label>
       <input id="app-search" class="search" type="search" placeholder="Search by app, package, category, or store..." autocomplete="off">
       <div id="apps" class="apps"></div>
+    </section>
+  </section>
+  <section id="updates-view" class="hidden">
+    <section class="panel">
+      <div class="title"><div><h2>System updates</h2><p>Signed OTA release currently offered to KDroid phones.</p></div><button id="refresh-updates" class="quiet">Refresh</button></div>
+      <div id="update-status" class="ota-status">Loading update status...</div>
     </section>
   </section>
   <div id="notice"></div>

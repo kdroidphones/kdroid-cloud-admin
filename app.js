@@ -24,16 +24,49 @@ async function request(path, options = {}) {
 
 function switchView(name) {
   const phones = name === 'phones';
+  const apps = name === 'apps';
+  const updates = name === 'updates';
   $('#phone-view').classList.toggle('hidden', !phones);
-  $('#apps-view').classList.toggle('hidden', phones);
+  $('#apps-view').classList.toggle('hidden', !apps);
+  $('#updates-view').classList.toggle('hidden', !updates);
   $('#show-phones').classList.toggle('active', phones);
-  $('#show-apps').classList.toggle('active', !phones);
+  $('#show-apps').classList.toggle('active', apps);
+  $('#show-updates').classList.toggle('active', updates);
   $('#show-phones').setAttribute('aria-pressed', String(phones));
-  $('#show-apps').setAttribute('aria-pressed', String(!phones));
-  if (!phones) $('#app-search').focus();
-  else if (token) $('#phone-search').focus();
+  $('#show-apps').setAttribute('aria-pressed', String(apps));
+  $('#show-updates').setAttribute('aria-pressed', String(updates));
+  if (apps) $('#app-search').focus();
+  else if (phones && token) $('#phone-search').focus();
 }
 
+
+async function loadUpdates() {
+  const box = $('#update-status');
+  box.textContent = 'Loading update status...';
+  try {
+    const response = await fetch('/ota/v1/metadata.json', { cache: 'no-store' });
+    if (!response.ok) throw new Error('Update status unavailable');
+    const release = await response.json();
+    const state = release.available ? 'Available' : 'No release published';
+    const version = release.versionName || release.version || 'Not set';
+    const notes = release.releaseNotes || 'No OTA is being offered. Phones will stay on their installed version.';
+    box.replaceChildren();
+    const badge = document.createElement('span');
+    badge.className = 'ota-badge ' + (release.available ? 'available' : 'idle');
+    badge.textContent = state;
+    const title = document.createElement('h3');
+    title.textContent = release.available ? `KDroid OS ${version}` : 'Phones are up to date';
+    const meta = document.createElement('p');
+    meta.className = 'meta';
+    meta.textContent = `Device: ${release.device || 'unknown'} | Schema: ${release.schemaVersion || 'unknown'}`;
+    const detail = document.createElement('p');
+    detail.textContent = notes;
+    box.append(badge, title, meta, detail);
+  } catch (error) {
+    box.textContent = error.message;
+    notice(error.message, true);
+  }
+}
 async function login(event) {
   event.preventDefault();
   try {
@@ -119,6 +152,8 @@ $('#logout').onclick = signout;
 $('#refresh').onclick = loadPhones;
 $('#show-phones').onclick = () => switchView('phones');
 $('#show-apps').onclick = () => switchView('apps');
+$('#show-updates').onclick = () => { switchView('updates'); loadUpdates(); };
+$('#refresh-updates').onclick = loadUpdates;
 $('#phone-search').addEventListener('input', filterDevices);
 $('#app-search').addEventListener('input', filterApps);
 loadApps();
