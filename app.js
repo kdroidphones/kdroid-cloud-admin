@@ -1,11 +1,125 @@
-const $=s=>document.querySelector(s),cfg=window.KDROID_CONFIG;let token=sessionStorage.getItem('kdroid_token')||'';
-function notice(m,e=false){const n=$('#notice');n.textContent=m;n.className='show'+(e?' error':'');clearTimeout(notice.t);notice.t=setTimeout(()=>n.className='',4000)}
-async function request(path,opt={}){const h={apikey:cfg.publishableKey,'Content-Type':'application/json',...(opt.headers||{})};if(token)h.Authorization='Bearer '+token;const r=await fetch(cfg.supabaseUrl+path,{...opt,headers:h});let b=null;try{b=await r.json()}catch{}if(!r.ok)throw new Error(b?.message||b?.error_description||`Request failed (${r.status})`);return b}
-async function login(e){e.preventDefault();try{const b=await request('/auth/v1/token?grant_type=password',{method:'POST',body:JSON.stringify({email:$('#email').value,password:$('#password').value})});token=b.access_token;sessionStorage.setItem('kdroid_token',token);show();notice('Signed in')}catch(x){notice(x.message,true)}}
-function check(text,value,disabled=false){const l=document.createElement('label'),i=document.createElement('input');l.className='check';i.type='checkbox';i.checked=value;i.disabled=disabled;l.append(i,document.createTextNode(text));return{l,i}}
-function render(d){const a=document.createElement('article');a.className='device';const h=document.createElement('h3');h.textContent=d.name||'KDroid phone';const m=document.createElement('div');m.className='meta';m.textContent=`${d.model||'Unknown model'} | ${d.public_id}`;const seen=document.createElement('small');seen.textContent='Last connected: '+(d.last_seen_at?new Date(d.last_seen_at).toLocaleString():'Never');const c=document.createElement('div');c.className='controls';const basic=check('Basic',true,true),shop=check('Shopping',!!d.shopping_enabled),biz=check('Business',!!d.business_enabled),save=document.createElement('button');save.textContent='Save access';c.append(basic.l,shop.l,biz.l,save);save.onclick=async()=>{try{await request(`/rest/v1/kdroid_devices?id=eq.${d.id}`,{method:'PATCH',headers:{Prefer:'return=minimal'},body:JSON.stringify({basic_enabled:true,shopping_enabled:shop.i.checked,business_enabled:biz.i.checked})});await command(d.id,'sync_catalog');notice(`${h.textContent} will sync`)}catch(x){notice(x.message,true)}};const f=document.createElement('form'),p=document.createElement('input'),send=document.createElement('button');f.className='command';p.placeholder='App package, e.g. com.example.app';p.required=true;send.textContent='Send update';f.append(p,send);f.onsubmit=async e=>{e.preventDefault();try{await command(d.id,'update_app',p.value.trim());p.value='';notice(`Update queued for ${h.textContent}`)}catch(x){notice(x.message,true)}};a.append(h,m,seen,c,f);return a}
-async function loadApps(){const box=$("#apps");try{const r=await fetch("/catalog/v1/catalog.json",{cache:"no-store"});if(!r.ok)throw new Error("Catalog unavailable");const catalog=await r.json(),apps=catalog.apps.filter(a=>!a.hidden);$("#app-count").textContent=`${apps.length} apps`;box.replaceChildren();apps.forEach(app=>{const card=document.createElement("article"),icon=document.createElement("img"),body=document.createElement("div"),name=document.createElement("h3"),meta=document.createElement("small"),link=document.createElement("a");card.className="app";icon.src=app.iconUrl||"";icon.alt="";icon.loading="lazy";name.textContent=app.name;meta.textContent=`${app.versionName} | ${app.store}`;body.append(name,meta);link.href=app.apkFiles[0].url;link.textContent="Download";link.rel="noopener";card.append(icon,body,link);box.append(card)})}catch(e){$("#app-count").textContent="Unavailable";box.textContent=e.message}}
-async function command(id,type,pkg=null){const row={device_id:id,command_type:type,payload:{}};if(pkg)row.package_name=pkg;await request('/rest/v1/kdroid_commands',{method:'POST',headers:{Prefer:'return=minimal'},body:JSON.stringify(row)})}
-async function load(){const box=$('#devices');box.textContent='Loading...';try{const rows=await request('/rest/v1/kdroid_devices?select=*&order=enrolled_at.desc');box.replaceChildren();if(!rows.length){box.innerHTML='<p class="empty">No phones enrolled yet.</p>';return}rows.forEach(d=>box.append(render(d)))}catch(x){if(/jwt|permission|401/i.test(x.message))signout();else{box.textContent='';notice(x.message,true)}}}
-function show(){$('#auth').classList.add('hidden');$('#dashboard').classList.remove('hidden');$('#logout').classList.remove('hidden');load()}function signout(){token='';sessionStorage.removeItem('kdroid_token');$('#auth').classList.remove('hidden');$('#dashboard').classList.add('hidden');$('#logout').classList.add('hidden')}
-$('#login').addEventListener('submit',login);$('#logout').onclick=signout;$('#refresh').onclick=load;loadApps();if(token)show();
+const $ = selector => document.querySelector(selector);
+const cfg = window.KDROID_CONFIG;
+let token = sessionStorage.getItem('kdroid_token') || '';
+let deviceRows = [];
+let appRows = [];
+
+function notice(message, error = false) {
+  const element = $('#notice');
+  element.textContent = message;
+  element.className = 'show' + (error ? ' error' : '');
+  clearTimeout(notice.timer);
+  notice.timer = setTimeout(() => element.className = '', 4000);
+}
+
+async function request(path, options = {}) {
+  const headers = { apikey: cfg.publishableKey, 'Content-Type': 'application/json', ...(options.headers || {}) };
+  if (token) headers.Authorization = 'Bearer ' + token;
+  const response = await fetch(cfg.supabaseUrl + path, { ...options, headers });
+  let body = null;
+  try { body = await response.json(); } catch {}
+  if (!response.ok) throw new Error(body?.message || body?.error_description || `Request failed (${response.status})`);
+  return body;
+}
+
+function switchView(name) {
+  const phones = name === 'phones';
+  $('#phone-view').classList.toggle('hidden', !phones);
+  $('#apps-view').classList.toggle('hidden', phones);
+  $('#show-phones').classList.toggle('active', phones);
+  $('#show-apps').classList.toggle('active', !phones);
+  $('#show-phones').setAttribute('aria-pressed', String(phones));
+  $('#show-apps').setAttribute('aria-pressed', String(!phones));
+  if (!phones) $('#app-search').focus();
+  else if (token) $('#phone-search').focus();
+}
+
+async function login(event) {
+  event.preventDefault();
+  try {
+    const body = await request('/auth/v1/token?grant_type=password', { method: 'POST', body: JSON.stringify({ email: $('#email').value, password: $('#password').value }) });
+    token = body.access_token;
+    sessionStorage.setItem('kdroid_token', token);
+    showDashboard();
+    notice('Signed in');
+  } catch (error) { notice(error.message, true); }
+}
+
+function check(text, value, disabled = false) {
+  const label = document.createElement('label');
+  const input = document.createElement('input');
+  label.className = 'check'; input.type = 'checkbox'; input.checked = value; input.disabled = disabled;
+  label.append(input, document.createTextNode(text));
+  return { label, input };
+}
+
+function renderDevice(device) {
+  const card = document.createElement('article'); card.className = 'device';
+  const heading = document.createElement('h3'); heading.textContent = device.name || 'KDroid phone';
+  const meta = document.createElement('div'); meta.className = 'meta'; meta.textContent = `${device.model || 'Unknown model'} | ${device.public_id}`;
+  const seen = document.createElement('small'); seen.textContent = `Last connected: ${device.last_seen_at ? new Date(device.last_seen_at).toLocaleString() : 'Never'} | OS ${device.os_version || 'unknown'} | Store ${device.store_version || 'unknown'}`;
+  const controls = document.createElement('div'); controls.className = 'controls';
+  const basic = check('Basic', true, true), shopping = check('Shopping', !!device.shopping_enabled), business = check('Business', !!device.business_enabled), save = document.createElement('button');
+  save.textContent = 'Save access'; controls.append(basic.label, shopping.label, business.label, save);
+  save.onclick = async () => { try { await request(`/rest/v1/kdroid_devices?id=eq.${device.id}`, { method: 'PATCH', headers: { Prefer: 'return=minimal' }, body: JSON.stringify({ basic_enabled: true, shopping_enabled: shopping.input.checked, business_enabled: business.input.checked }) }); await command(device.id, 'sync_catalog'); notice(`${heading.textContent} will sync`); } catch (error) { notice(error.message, true); } };
+  const form = document.createElement('form'), packageInput = document.createElement('input'), send = document.createElement('button');
+  form.className = 'command'; packageInput.placeholder = 'App package, e.g. com.example.app'; packageInput.required = true; send.textContent = 'Send update'; form.append(packageInput, send);
+  form.onsubmit = async event => { event.preventDefault(); try { await command(device.id, 'update_app', packageInput.value.trim()); packageInput.value = ''; notice(`Update queued for ${heading.textContent}`); } catch (error) { notice(error.message, true); } };
+  card.append(heading, meta, seen, controls, form);
+  return card;
+}
+
+function filterDevices() {
+  const query = $('#phone-search').value.trim().toLowerCase();
+  const matches = deviceRows.filter(device => [device.name, device.model, device.public_id, device.os_version, device.store_version].some(value => String(value || '').toLowerCase().includes(query)));
+  const box = $('#devices'); box.replaceChildren();
+  $('#phone-count').textContent = `${matches.length} of ${deviceRows.length} phones`;
+  if (!matches.length) { box.innerHTML = '<p class="empty">No matching phones.</p>'; return; }
+  matches.forEach(device => box.append(renderDevice(device)));
+}
+
+async function loadPhones() {
+  const box = $('#devices'); box.textContent = 'Loading phones...';
+  try { deviceRows = await request('/rest/v1/kdroid_devices?select=*&order=enrolled_at.desc'); filterDevices(); }
+  catch (error) { if (/jwt|permission|401/i.test(error.message)) signout(); else { box.textContent = ''; notice(error.message, true); } }
+}
+
+function renderApp(app) {
+  const card = document.createElement('article'); card.className = 'app';
+  const icon = document.createElement('img'); icon.src = app.iconUrl || ''; icon.alt = ''; icon.loading = 'lazy';
+  const body = document.createElement('div'), name = document.createElement('h3'), meta = document.createElement('small'), pkg = document.createElement('code');
+  name.textContent = app.name; meta.textContent = `${app.versionName} | ${app.store} | ${app.category}`; pkg.textContent = app.packageName;
+  body.append(name, meta, pkg); card.append(icon, body); return card;
+}
+
+function filterApps() {
+  const query = $('#app-search').value.trim().toLowerCase();
+  const matches = appRows.filter(app => [app.name, app.packageName, app.category, app.store, app.versionName].some(value => String(value || '').toLowerCase().includes(query)));
+  const box = $('#apps'); box.replaceChildren(); $('#app-count').textContent = `${matches.length} of ${appRows.length} apps`;
+  if (!matches.length) { box.innerHTML = '<p class="empty">No matching apps.</p>'; return; }
+  matches.forEach(app => box.append(renderApp(app)));
+}
+
+async function loadApps() {
+  const box = $('#apps');
+  try { const response = await fetch('/catalog/v1/catalog.json', { cache: 'no-store' }); if (!response.ok) throw new Error('Catalog unavailable'); const catalog = await response.json(); appRows = catalog.apps.filter(app => !app.hidden); filterApps(); }
+  catch (error) { $('#app-count').textContent = 'Unavailable'; box.textContent = error.message; }
+}
+
+async function command(id, type, packageName = null) {
+  const row = { device_id: id, command_type: type, payload: {} }; if (packageName) row.package_name = packageName;
+  await request('/rest/v1/kdroid_commands', { method: 'POST', headers: { Prefer: 'return=minimal' }, body: JSON.stringify(row) });
+}
+
+function showDashboard() { $('#auth').classList.add('hidden'); $('#dashboard').classList.remove('hidden'); $('#logout').classList.remove('hidden'); loadPhones(); }
+function signout() { token = ''; sessionStorage.removeItem('kdroid_token'); deviceRows = []; $('#auth').classList.remove('hidden'); $('#dashboard').classList.add('hidden'); $('#logout').classList.add('hidden'); }
+
+$('#login').addEventListener('submit', login);
+$('#logout').onclick = signout;
+$('#refresh').onclick = loadPhones;
+$('#show-phones').onclick = () => switchView('phones');
+$('#show-apps').onclick = () => switchView('apps');
+$('#phone-search').addEventListener('input', filterDevices);
+$('#app-search').addEventListener('input', filterApps);
+loadApps();
+if (token) showDashboard();

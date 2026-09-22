@@ -1,5 +1,56 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KDroid Administrator</title><link rel="stylesheet" href="app.css"></head>
-<body><main><header><div><p class="eyebrow">KDROID</p><h1>Phone Administrator</h1><p>Manage approved stores and updates for every enrolled phone.</p></div><button id="logout" class="quiet hidden">Sign out</button></header>
-<section id="auth" class="panel"><h2>Administrator login</h2><form id="login"><label>Email<input id="email" type="email" required autocomplete="username"></label><label>Password<input id="password" type="password" required autocomplete="current-password"></label><button>Sign in securely</button></form></section>
-<section id="dashboard" class="hidden"><section class="panel"><div class="title"><div><h2>Managed phones</h2><p>Basic is always included. Shopping and Business can be changed per phone.</p></div><button id="refresh" class="quiet">Refresh</button></div><div id="devices"></div></section></section><section class="panel"><div class="title"><div><h2>Approved apps</h2><p>The signed catalog used by every KDroid phone.</p></div><span id="app-count" class="meta">Loading...</span></div><div id="apps" class="apps"></div></section><div id="notice"></div></main><script src="config.js"></script><script src="app.js"></script></body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>KDroid Administrator</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+<main>
+  <header>
+    <div><p class="eyebrow">KDROID</p><h1>Administrator</h1><p>Manage phones and browse the approved app catalog.</p></div>
+    <button id="logout" class="quiet hidden">Sign out</button>
+  </header>
+  <nav class="view-switch" aria-label="Administrator sections">
+    <button id="show-phones" class="view-button active" aria-pressed="true">Phones</button>
+    <button id="show-apps" class="view-button" aria-pressed="false">Apps</button>
+  </nav>
+
+  <section id="phone-view">
+    <section id="auth" class="panel">
+      <h2>Administrator login</h2>
+      <p>Sign in to view and manage enrolled phones.</p>
+      <form id="login">
+        <label>Email<input id="email" type="email" required autocomplete="username"></label>
+        <label>Password<input id="password" type="password" required autocomplete="current-password"></label>
+        <button>Sign in securely</button>
+      </form>
+    </section>
+    <section id="dashboard" class="hidden">
+      <section class="panel">
+        <div class="title">
+          <div><h2>Managed phones</h2><p>Search by customer, model, phone ID, or OS version.</p></div>
+          <button id="refresh" class="quiet">Refresh</button>
+        </div>
+        <label class="search-label" for="phone-search">Search phones</label>
+        <input id="phone-search" class="search" type="search" placeholder="Search phones..." autocomplete="off">
+        <div class="results-line"><span id="phone-count" class="meta"></span></div>
+        <div id="devices"></div>
+      </section>
+    </section>
+  </section>
+
+  <section id="apps-view" class="hidden">
+    <section class="panel">
+      <div class="title"><div><h2>Approved apps</h2><p>Browse the signed catalog available in KDroid Store.</p></div><span id="app-count" class="meta">Loading...</span></div>
+      <label class="search-label" for="app-search">Search apps</label>
+      <input id="app-search" class="search" type="search" placeholder="Search by app, package, category, or store..." autocomplete="off">
+      <div id="apps" class="apps"></div>
+    </section>
+  </section>
+  <div id="notice"></div>
+</main>
+<script src="config.js"></script><script src="app.js"></script>
+</body>
+</html>
